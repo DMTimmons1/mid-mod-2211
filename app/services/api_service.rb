@@ -1,5 +1,5 @@
 class ApiService
-  def self.movie_call(url)
+  def self.call(url)
     conn = make_conn
     response = conn.get(url)
     JSON.parse(response.body, symbolize_names: true)
