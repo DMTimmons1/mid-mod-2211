@@ -1,10 +1,22 @@
 <h1> Search Results </h1>
 <h3> Total Results: <%= @results.total %> </h3>
+
 <ol>
 <% @foods.each do |food| %>
-  <li><p> GTIN/UPC code: <%= food.code %> </p>
-      <p> Brand Owner: <%= food.brand %> </p>
-      <p> Description: <%= food.description %> </p>
-      <p> Ingredients: <%= food.ingredients %> </p>
+  <div id="page_results">
+    <div id="code">
+      <li><p> GTIN/UPC code: <%= food.code %> </p>
+    </div>
+      <div id="brand_owner">
+        <p> Brand Owner: <%= food.brand %> </p>
+      </div>
+        <div id ="description">
+          <p> Description: <%= food.description %> </p>
+        </div>
+          <div id="ingredients">
+            <p> Ingredients: <%= food.ingredients %> </p>
+          </div>
+  </div>
 <% end %>
 </ol>
+
